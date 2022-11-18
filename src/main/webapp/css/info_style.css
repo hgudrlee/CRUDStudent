@@ -1,0 +1,13 @@
+@media (max-width: 780px) {
+    ul {
+        display: block;
+        width: 100%;
+    }
+    #jumbo h1 {
+        font-size: 1.5rem;
+    }
+    #intro {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+}
