@@ -1,5 +1,9 @@
 @media (max-width: 780px) {
+    header {
+        text-align: center;
+    }
     ul {
+        justify-content: center;
         display: block;
         width: 100%;
     }

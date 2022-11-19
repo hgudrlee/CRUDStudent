@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<name>Insert name here</name>
 </head>
 <body>
 
-<jsp:forward page="posts.jsp" />
+<jsp:forward page="POSTS2.jsp" />
 
 </body>
 </html>

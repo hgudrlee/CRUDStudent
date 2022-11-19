@@ -1,18 +1,16 @@
 package com.example.bean;
 
-import java.util.Date;
-
 public class StudentVO {
 	private int seq;
 	private String name;
 	private String gender;
-	private Date birthday;
+	private String birthday;
 	private String studentid;
 	private String grade;
 	private String department;
 	private String email;
 	private String phone;
-	private int cnt;
+	private String photo;
 
 	public StudentVO() {
 	}
@@ -20,31 +18,48 @@ public class StudentVO {
 	public int getSeq() {
 		return seq;
 	}
+
 	public void setSeq(int seq) {
 		this.seq = seq;
 	}
-	public String getname() {
+
+	public String getName() {
 		return name;
 	}
-	public void setname(String name) {
+
+	public void setName(String name) {
 		this.name = name;
 	}
-	public String getgender() {
+
+	public String getGender() {
 		return gender;
 	}
-	public void setgender(String gender) {
+
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public Date getbirthday() {
+
+	public String getBirthday() {
 		return birthday;
 	}
-	public void setbirthday(Date birthday) {
+
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
-	public String getgrade() {
+
+	public String getStudentid() {
+		return studentid;
+	}
+
+	public void setStudentid(String studentid) {
+		this.studentid = studentid;
+	}
+
+	public String getGrade() {
 		return grade;
 	}
-	public void setgrade(String grade) {
+
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 
@@ -72,18 +87,11 @@ public class StudentVO {
 		this.phone = phone;
 	}
 
-	public String getStudentid() {
-		return studentid;
+	public String getPhoto() {
+		return photo;
 	}
 
-	public void setStudentid(String studentid) {
-		this.studentid = studentid;
-	}
-
-	public int getCnt() {
-		return cnt;
-	}
-	public void setCnt(int cnt) {
-		this.cnt = cnt;
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 }

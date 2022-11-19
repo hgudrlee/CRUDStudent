@@ -1,10 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          birthday="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" birthday="ie=edge">
     <link rel="stylesheet" href="./css/info_style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -33,7 +35,7 @@
                 return false;
             }
 
-            var id = document.form.id;
+            var id = document.form.studentid;
             if (id.value == "") {
                 alert("Please enter your student id");
                 id.focus();
@@ -69,7 +71,6 @@
             }
         }
     </script>
-    <title>Document</title>
     <style>
         .btn-custom {
             width: 200px;
@@ -90,19 +91,25 @@
             height: 100px;
             margin-top: 50px;
         }
+        #file {
+            margin-top: 10px;
+        }
+        #input-photo {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
 <div class="container-fluid">
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <a href="./POSTS2.jsp" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <span class="fs-4">HGU Manager</span>
             </a>
 
             <ul class="nav nav-pills justify-content-center">
-                <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="./add.html" class="nav-link">Add</a></li>
+                <li class="nav-item"><a href="./POSTS2.jsp" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./ADDPOSTFORM2.jsp" class="nav-link">Add</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>
             </ul>
         </header>
@@ -112,7 +119,7 @@
         <p class="fs-4"><span id="intro">This form can help every teacher to add student information more effectively.</span></p>
     </div>
     <div class="container">
-        <form name="form" method="post" action="./add_ok.php" onsubmit="return validateForm()">
+        <form name="form" method="post" action="./ADDPOST2.jsp" onsubmit="return validateForm()" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-lg-3">
                     <div class="well">
@@ -145,8 +152,8 @@
                 </div>
                 <div class="col-xs-12 col-md-6 col-lg-3">
                     <div class="well">
-                        <label for="id">Student ID:</label>
-                        <input type="text" class="form-control" name="id" id="id">
+                        <label for="studentid">Student ID:</label>
+                        <input type="text" class="form-control" name="studentid" id="studentid">
                     </div>
                 </div>
             </div>
@@ -181,6 +188,14 @@
                     <div class="well">
                         <label for="phone">Phone number:</label>
                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="010-xxxx-xxxx" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xs-12">
+                    <div class="d-flex justify-content-center" id="file">
+                        <label for="photo" id="input-photo">Photo:</label>
+                        <input type="file" name="photo" id="photo">
                     </div>
                 </div>
             </div>

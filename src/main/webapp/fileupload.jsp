@@ -1,16 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: drlee
-  Date: 2022-11-18
-  Time: 오전 1:47
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
-</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ page import ="com.example.util.*, java.io.File"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+
+<%
+  String filename = "";
+  int sizeLimit = 15 * 1024 * 1024;
+
+  String realPath = request.getServletContext().getRealPath("upload");
+  File dir = new File(realPath);
+  if (!dir.exists()) dir.mkdirs();
+
+  MultipartRequest multipartRequest = null;
+  multipartRequest = new MultipartRequest(request, realPath,
+          sizeLimit, "utf-8",new DefaultFileRenamePolicy());
+%>
+
+<script>
+  location.href='ADDPOST2.jsp';
+</script>
